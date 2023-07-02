@@ -70,6 +70,10 @@ for i in range (0, many):
 
                 result_str = result_str + r
 
+            if int(random.choice(l)) % 2 == 0 and result_str[0] != "-":
+
+                result_str = "-" + result_str
+
             cache_l.append(result_str)
 
             result_str = ""
@@ -84,7 +88,7 @@ for i in range (0, many):
 
             veritas = int(cache_l[-2]) + int(cache_l[-1])
 
-        phrase = "What's " + str(cache_l[-2]) + " " + appl + " " + str(cache_l[-1]) + "? "
+        phrase = "What's " + str(cache_l[-2]) + " " + appl + " " + str(cache_l[-1]) + " ? "
 
         strt = time.time()
 
@@ -138,6 +142,10 @@ for i in range (0, many):
 
             result_str = result_str + r
 
+        if int(random.choice(l)) % 2 == 0 and result_str[0] != "-":
+
+            result_str = "-" + result_str
+
         cache_l.append(result_str)
 
         appl = random.choice(cl)
@@ -150,7 +158,9 @@ for i in range (0, many):
 
         veritas = int(cache_l[-2]) * float(cache_l[-1])
 
-        phrase = "What's " + str(cache_l[-2]) + " * " + str(cache_l[-1]) + "? "
+        veritas = round(veritas, 3)
+
+        phrase = "What's " + str(cache_l[-2]) + " * " + str(cache_l[-1]) + " ? "
 
         veritas_h = str(input(phrase))
 
