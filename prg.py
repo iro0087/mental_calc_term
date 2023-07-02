@@ -12,6 +12,8 @@ s = w.active
 
 l = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"]
 
+lb = ["0", "1", "2", "3"]
+
 easy_l = [1, 2, 3]
 
 medium_l = [4, 5]
@@ -140,7 +142,7 @@ for i in range (0, many):
 
         appl = random.choice(cl)
 
-        prct = "0." + str(random.choice(l))
+        prct = random.choice(lb) + "." + str(random.choice(l))
 
         cache_l.append(prct)
 
@@ -148,7 +150,7 @@ for i in range (0, many):
 
         veritas = int(cache_l[-2]) * float(cache_l[-1])
 
-        phrase = "What's " + str(cache_l[-2]) + " * " + str(cache_l[-1]) + "?"
+        phrase = "What's " + str(cache_l[-2]) + " * " + str(cache_l[-1]) + "? "
 
         veritas_h = str(input(phrase))
 
